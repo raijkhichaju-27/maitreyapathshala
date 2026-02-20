@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent Education | Maitreya Pathshala</title>
+
+    <meta name="description" content="Parent Education at Maitreya Pathshala - Fostering collaborative learning community between parents and Waldorf education.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lanchitas&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Parent Education Page Specific Styles */
+        .parent-hero {
+            background: linear-gradient(rgba(107, 50, 7, 0.9), rgba(107, 50, 7, 0.8)), url('assets/blog1.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .parent-hero h1 {
+            font-family: 'Lanchitas', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .parent-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        /* Parent Content Sections */
+        .parent-section {
+            padding: 80px 0;
+        }
+        
+        .parent-section:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .parent-section:nth-child(odd) {
+            background: white;
+        }
+        
+        .parent-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .parent-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .parent-header h2 {
+            font-family: 'Lanchitas', cursive;
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .parent-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .parent-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 20px auto 0;
+            line-height: 1.6;
+        }
+        
+        /* Introduction Section */
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+        }
+        
+        /* Development Stages Grid */
+        .stages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stage-card {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .stage-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stage-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .stage-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+        
+        .stage-card h3 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .stage-card p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        /* Workshops Section */
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .workshop-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+        
+        .workshop-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .workshop-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .workshop-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .workshop-card:hover .workshop-image img {
+            transform: scale(1.05);
+        }
+        
+        .workshop-details {
+            padding: 25px;
+        }
+        
+        .workshop-details h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .workshop-details p {
+            color: var(--gray);
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+        
+        /* Community Section */
+        .community-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        
+        .community-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+        }
+        
+        .community-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 350px;
+        }
+        
+        .community-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Grade Sessions */
+        .grade-sessions {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .grade-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s;
+            border-left: 5px solid var(--primary);
+        }
+        
+        .grade-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .grade-card h4 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .grade-card p {
+            color: var(--gray);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        /* Call to Action */
+        .parent-cta {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        
+        .parent-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .parent-cta p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .parent-cta .cta {
+            background: white;
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .parent-cta .cta:hover {
+            background: var(--secondary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Styles for Parent Education Page */
+        @media (max-width: 1024px) {
+            .community-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .community-image {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .parent-hero {
+                padding: 80px 0;
+            }
+            
+            .parent-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .parent-section {
+                padding: 60px 0;
+            }
+            
+            .parent-header h2 {
+                font-size: 2rem;
+            }
+            
+            .stages-grid, .workshop-grid, .grade-sessions {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 20px;
+            }
+            
+            .stage-card, .workshop-card, .grade-card {
+                padding: 25px 20px;
+            }
+            
+            .parent-cta {
+                padding: 40px 20px;
+            }
+            
+            .parent-cta h3 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .parent-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .parent-hero p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .parent-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .stages-grid, .workshop-grid, .grade-sessions {
+                grid-template-columns: 1fr;
+            }
+            
+            .parent-cta h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Maitreya Pathshala Logo" class="logo-img">
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="index.html">HOME</a>
+                <a href="blog.html">BLOG</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="admissions.html">ADMISSIONS</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="parent-education.html" class="active">PARENT EDUCATION</a>
+            </nav>
+
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="index.html">HOME</a>
+                    <a href="blog.html">BLOG</a>
+                    <a href="gallery.html">GALLERY</a>
+                    <a href="admissions.html">ADMISSIONS</a>
+                    <a href="about.html">ABOUT US</a>
+                    <a href="parent-education.html" class="active">PARENT EDUCATION</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- PARENT EDUCATION HERO -->
+    <section class="parent-hero">
+        <div class="container">
+            <h1>Parent Education</h1>
+            <p>Fostering a Collaborative Learning Community between Parents and Waldorf Education</p>
+        </div>
+    </section>
+
+    <!-- INTRODUCTION SECTION -->
+    <section class="parent-section">
+        <div class="parent-content">
+            <div class="parent-header">
+                <h2>A Shared Journey</h2>
+                <p>At Maitreya Pathshala, education is a collaborative journey built on trust, respect, and shared intention.</p>
+            </div>
+            
+            <div class="intro-content">
+                <p>We believe that the journey of education is not confined to the classroom. Parents are the child's first teachers, and their active participation is vital to holistic development. To strengthen this partnership, we offer a thoughtful programme of parent education. Through parent and teacher education, we nurture a culture where every adult involved in a child's life is informed, inspired, and empowered to support their unfolding potential.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEVELOPMENT STAGES SECTION -->
+    <section class="parent-section">
+        <div class="parent-content">
+            <div class="parent-header">
+                <h2>Understanding Child Development</h2>
+                <p>We host a variety of sessions for parents across the school year, addressing developmental milestones at every stage of childhood</p>
+            </div>
+            
+            <div class="stages-grid">
+                <div class="stage-card">
+                    <div class="stage-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Early Childhood Development</h3>
+                    <p>Supporting the unique needs and natural growth rhythms of young children. Learn about play-based learning, healthy routines, and creating nurturing home environments.</p>
+                </div>
+                
+                <div class="stage-card">
+                    <div class="stage-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>The Ninth-Year Threshold</h3>
+                    <p>A pivotal stage where children begin to experience a sense of individuality and emotional depth—also known as the "9-year change." Guidance for navigating this important transition.</p>
+                </div>
+                
+                <div class="stage-card">
+                    <div class="stage-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Adolescence and Beyond</h3>
+                    <p>Providing insights and strategies to navigate the complex emotional landscape of the teenage years. Communication techniques and supporting emerging independence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKSHOPS SECTION -->
+    <section class="parent-section">
+        <div class="parent-content">
+            <div class="parent-header">
+                <h2>Skill-Based Parent Workshops</h2>
+                <p>In keeping with our hands-on Waldorf ethos, we offer creative and practical sessions for parents</p>
+            </div>
+            
+            <div class="workshop-grid">
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <img src="assets/5.png" alt="Woodwork Workshop">
+                    </div>
+                    <div class="workshop-details">
+                        <h3>Woodwork and Artistic Activities</h3>
+                        <p>Enabling parents to engage with the crafts that form part of their child's learning journey. Learn basic woodworking, painting techniques, and handcrafts used in our curriculum.</p>
+                    </div>
+                </div>
+                
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <img src="assets/3.png" alt="Study Group Session">
+                    </div>
+                    <div class="workshop-details">
+                        <h3>Parent Study Groups</h3>
+                        <p>Facilitating shared reading, dialogue, and reflection on parenting, education, and childhood development. Explore Waldorf philosophy and child development theories together.</p>
+                    </div>
+                </div>
+                
+                <div class="workshop-card">
+                    <div class="workshop-image">
+                        <img src="assets/2.png" alt="Seasonal Crafts">
+                    </div>
+                    <div class="workshop-details">
+                        <h3>Seasonal Crafts & Festivals</h3>
+                        <p>Learn to create seasonal decorations and understand the significance of Waldorf festivals. Bring the rhythm of the seasons into your home environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY INVOLVEMENT SECTION -->
+    <section class="parent-section">
+        <div class="parent-content">
+            <div class="parent-header">
+                <h2>Community Involvement</h2>
+                <p>Building a supportive network of parents engaged in their children's education</p>
+            </div>
+            
+            <div class="community-content">
+                <div class="community-text">
+                    <p>Many of our parents actively contribute to school life by sharing their expertise through guest talks, project sessions, or field trips. This enriches classroom learning with real-world insight and helps children see learning as a community-wide endeavour.</p>
+                    <p style="margin-top: 20px;">Parents can participate in classroom activities, assist with school festivals, join our parent council, or share professional skills that complement our curriculum. This collaborative approach strengthens the bond between home and school.</p>
+                </div>
+                
+                <div class="community-image">
+                    <img src="assets/1.png" alt="Parent Community Activities">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRADE-SPECIFIC SESSIONS -->
+    <section class="parent-section">
+        <div class="parent-content">
+            <div class="parent-header">
+                <h2>Grade-Specific Parenting Sessions</h2>
+                <p>Age-appropriate guidance for each stage of your child's educational journey</p>
+            </div>
+            
+            <div class="grade-sessions">
+                <div class="grade-card">
+                    <h4>Kindergarten Parents</h4>
+                    <p>Understanding the importance of play, rhythm, and imitation in early childhood. Creating harmonious home environments that support the young child's development.</p>
+                </div>
+                
+                <div class="grade-card">
+                    <h4>Grade 1-3 Parents</h4>
+                    <p>Supporting the transition to formal learning. Understanding the class teacher system and how to support reading, writing, and arithmetic development at home.</p>
+                </div>
+                
+                <div class="grade-card">
+                    <h4>Grade 4-6 Parents</h4>
+                    <p>Navigating the nine-year change and emerging independence. Supporting project-based learning and the development of critical thinking skills.</p>
+                </div>
+                
+                <div class="grade-card">
+                    <h4>Grade 7-9 Parents</h4>
+                    <p>Guiding through adolescence and academic challenges. Understanding Waldorf's approach to secondary education and preparing for future educational paths.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="parent-section">
+        <div class="parent-content">
+            <div class="parent-cta">
+                <h3>Join Our Parent Community</h3>
+                <p>Become an active partner in your child's Waldorf education journey. Attend our next parent education session and connect with other families in our school community.</p>
+                <a href="admissions.html#contact" class="cta">Contact Us to Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>Maitreya Pathshala</h3>
+                        <p>The Pokhara Waldorf School</p>
+                    </div>
+                    <p>Providing quality Waldorf education with experienced faculty for holistic development.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/maitreyapathshala" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Follow us on Facebook
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="parent-education.html">Parent Education</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Maitreya Pathshala, Pokhara, Nepal</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+977 123-456-7890</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@maitreyapathshala.edu.np</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Sun-Fri: 9:00 AM - 5:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maitreya Pathshala - The Pokhara Waldorf School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

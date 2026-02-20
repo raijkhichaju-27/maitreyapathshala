@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Maitreya Pathshala</title>
+
+    <meta name="description" content="Learn about Maitreya Pathshala - The Pokhara Waldorf School providing holistic Waldorf education for children in Nepal.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lanchitas&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            background: linear-gradient(rgba(107, 50, 7, 0.9), rgba(107, 50, 7, 0.8)), url('assets/blog1.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .about-hero h1 {
+            font-family: 'Lanchitas', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .about-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        /* About Content Sections */
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .about-section:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .about-section:nth-child(odd) {
+            background: white;
+        }
+        
+        .section-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-family: 'Lanchitas', cursive;
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 20px auto 0;
+            line-height: 1.6;
+        }
+        
+        /* Mission Vision Section */
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .mission-card, .vision-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .mission-card:hover, .vision-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .mission-card i, .vision-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .mission-card h3, .vision-card h3 {
+            color: var(--secondary);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .mission-card p, .vision-card p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        /* History Section */
+        .history-timeline {
+            max-width: 800px;
+            margin: 50px auto 0;
+            position: relative;
+        }
+        
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-year {
+            flex: 0 0 120px;
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            z-index: 2;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin: 0 30px;
+            z-index: 1;
+        }
+        
+        .timeline-content h4 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+        
+        .member-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .team-member:hover .member-image img {
+            transform: scale(1.05);
+        }
+        
+        .member-info {
+            padding: 25px;
+        }
+        
+        .member-info h4 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        
+        .member-info .position {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+        
+        .member-info p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .value-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+        
+        .value-card h4 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        
+        .value-card p {
+            color: var(--gray);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        /* Campus Section */
+        .campus-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .campus-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            height: 250px;
+            position: relative;
+        }
+        
+        .campus-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .campus-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .campus-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .campus-image:hover .campus-overlay {
+            opacity: 1;
+        }
+        
+        .campus-overlay h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        /* Responsive Styles for About Page */
+        @media (max-width: 1024px) {
+            .mission-vision-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .history-timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+                align-items: flex-start;
+            }
+            
+            .timeline-year {
+                flex: 0 0 100px;
+                margin-right: 20px;
+            }
+            
+            .timeline-content {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .about-hero {
+                padding: 80px 0;
+            }
+            
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-section {
+                padding: 60px 0;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .mission-card, .vision-card {
+                padding: 30px 25px;
+            }
+            
+            .team-grid, .values-grid, .campus-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .history-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                margin-bottom: 30px;
+            }
+            
+            .timeline-year {
+                flex: 0 0 80px;
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+            
+            .timeline-content {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .about-hero p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .team-grid, .values-grid, .campus-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-card h3, .vision-card h3 {
+                font-size: 1.5rem;
+            }
+            
+            .value-card {
+                padding: 25px 20px;
+            }
+            
+            .value-icon {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .value-icon i {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Maitreya Pathshala Logo" class="logo-img">
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="index.html">HOME</a>
+                <a href="blog.html">BLOG</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="admissions.html">ADMISSIONS</a>
+                <a href="about.html" class="active">ABOUT US</a>
+                    <a href="parent-education.html">PARENT EDUCATION</a>
+            </nav>
+
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="index.html">HOME</a>
+                    <a href="blog.html">BLOG</a>
+                    <a href="gallery.html">GALLERY</a>
+                    <a href="admissions.html">ADMISSIONS</a>
+                    <a href="about.html" class="active">ABOUT US</a>
+                        <a href="parent-education.html">PARENT EDUCATION</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT HERO -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Maitreya Pathshala</h1>
+            <p>Discover our journey, mission, and commitment to holistic Waldorf education in Pokhara</p>
+        </div>
+    </section>
+
+    <!-- MISSION & VISION SECTION -->
+    <section class="about-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>Our Mission & Vision</h2>
+                <p>Guiding principles that shape our educational approach and school community</p>
+            </div>
+            
+            <div class="mission-vision-grid">
+                <div class="mission-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>To provide a nurturing Waldorf educational environment that fosters holistic development, creativity, and academic excellence. We aim to cultivate curious, compassionate, and confident individuals who contribute positively to society while honoring their unique potential.</p>
+                </div>
+                
+                <div class="vision-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be Nepal's leading Waldorf educational institution, recognized for developing well-rounded individuals who excel academically, think critically, act compassionately, and live purposefully. We envision a community where every child discovers their passion and potential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR HISTORY SECTION -->
+    <section class="about-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>Our Journey</h2>
+                <p>A timeline of our school's development and milestones</p>
+            </div>
+            
+            <div class="history-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-content">
+                        <h4>Foundation & Inception</h4>
+                        <p>Maitreya Pathshala was founded by a group of educators passionate about bringing Waldorf education to Pokhara. Started with just 15 students and 3 teachers in a small rented building.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2013</div>
+                    <div class="timeline-content">
+                        <h4>First Permanent Campus</h4>
+                        <p>Acquired our current campus location and began construction of purpose-built Waldorf classrooms, art studios, and outdoor learning spaces designed for holistic education.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2016</div>
+                    <div class="timeline-content">
+                        <h4>Curriculum Expansion</h4>
+                        <p>Expanded our program to include Grades 4-6 and introduced specialized Waldorf teacher training programs for our faculty, enhancing educational quality and consistency.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-content">
+                        <h4>Community Recognition</h4>
+                        <p>Received recognition from the Nepal Waldorf Association for excellence in implementing Waldorf pedagogy. Student enrollment grew to over 200 students across all grades.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h4>Modern Facilities & Technology</h4>
+                        <p>Completed construction of new science labs, music rooms, and computer facilities while maintaining Waldorf's balance between technology and hands-on learning.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h4>Current Status & Future</h4>
+                        <p>Now serving 300+ students with 35+ dedicated faculty members. Planning expansion of high school program and international exchange partnerships with Waldorf schools worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <!-- FACULTY TEAM SECTION -->
+    <section class="about-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>Our Dedicated Faculty</h2>
+                <p>Meet our passionate educators committed to Waldorf principles</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/1.png" alt="Principal">
+                    </div>
+                    <div class="member-info">
+                        <h4>Mr. Ritman Gurung</h4>
+                        <div class="position">Co-Founder, Principal & Grade Teacher</div>
+                        <p>MA in Economics, Diploma in Eurythmy, currently studying Master in Eurythmy Therapy at Emerson College, UK. Brings 20+ years of Waldorf experience combining academics with eurythmy.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/2.png" alt="Kindergarten Teacher">
+                    </div>
+                    <div class="member-info">
+                        <h4>Ms. Bishnu Kumari Sherchan</h4>
+                        <div class="position">Co-Founder & Early Childhood Educator</div>
+                        <p>MA in Anthropology. Specializes in early childhood Waldorf education, creating nurturing environments for play-based learning and imagination development.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/3.png" alt="Music Teacher">
+                    </div>
+                    <div class="member-info">
+                        <h4>Ms. Asha Devi Dura</h4>
+                        <div class="position">Grade Teacher & Arts Educator</div>
+                        <p>Master in Education, TU. Professional musician and Waldorf arts educator. Integrates music, movement, and visual arts across the curriculum.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/4.png" alt="Grade Teacher">
+                    </div>
+                    <div class="member-info">
+                        <h4>Pratichya Gurung</h4>
+                        <div class="position">Grade Teacher & Eurythmist</div>
+                        <p>Currently studying Bachelor in Education. Brings eurythmy and experiential learning to the classroom through Waldorf's holistic approach.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/4.png" alt="Grade Teacher">
+                    </div>
+                    <div class="member-info">
+                        <h4>Jyoti Sherchan</h4>
+                        <div class="position">Grade Teacher</div>
+                        <p>Master in Pharmacy. Brings a unique scientific perspective to Waldorf education, making learning experiential and wonder-filled.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/4.png" alt="Grade Teacher">
+                    </div>
+                    <div class="member-info">
+                        <h4>Ram Rana</h4>
+                        <div class="position">Grade Teacher</div>
+                        <p>Currently studying Bachelor in Tourism. Brings diverse perspectives and enthusiasm to the Waldorf classroom.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/4.png" alt="Grade Teacher">
+                    </div>
+                    <div class="member-info">
+                        <h4>Shristi Thapa Magar</h4>
+                        <div class="position">Grade Teacher</div>
+                        <p>Currently studying Bachelor in Education. Passionate about child-centered learning and holistic development.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/4.png" alt="Grade Teacher">
+                    </div>
+                    <div class="member-info">
+                        <h4>Bishnu Thapa Shrestha</h4>
+                        <div class="position">Grade Teacher</div>
+                        <p>Bachelor in Management. Brings organizational excellence and creative teaching methods to the classroom.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/4.png" alt="Math Teacher">
+                    </div>
+                    <div class="member-info">
+                        <h4>Basanta Baral</h4>
+                        <div class="position">High School Math Teacher</div>
+                        <p>M.Sc. NRM, M.A. Sociology, MPGD. Makes mathematics experiential and accessible through Waldorf's phenomenological approach.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/4.png" alt="Language Teacher">
+                    </div>
+                    <div class="member-info">
+                        <h4>Bishnu Parajuli</h4>
+                        <div class="position">High School Language Teacher</div>
+                        <p>MA in Language. Brings language to life through storytelling, poetry, and the Waldorf method of immersive learning.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/4.png" alt="Music Teacher">
+                    </div>
+                    <div class="member-info">
+                        <h4>Roshan Maharjan</h4>
+                        <div class="position">Music Teacher</div>
+                        <p>Professional musician specializing in Waldorf music education. Fosters musical appreciation and skill development in students.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/4.png" alt="Tai Chi Teacher">
+                    </div>
+                    <div class="member-info">
+                        <h4>Suk Dev Nepali</h4>
+                        <div class="position">Tai Chi Teacher</div>
+                        <p>Specializes in movement education and Tai Chi. Integrates mind-body awareness and purposeful movement into the curriculum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAMPUS FACILITIES SECTION -->
+    <section class="about-section">
+        <div class="section-content">
+            <div class="section-header">
+                <h2>Our Campus & Facilities</h2>
+                <p>A nurturing environment designed for holistic learning and growth</p>
+            </div>
+            
+            <div class="campus-gallery">
+                <div class="campus-image">
+                    <img src="assets/1.png" alt="Waldorf Classrooms">
+                    <div class="campus-overlay">
+                        <h4>Waldorf Classrooms</h4>
+                        <p>Natural materials, warm colors, and flexible learning spaces</p>
+                    </div>
+                </div>
+                
+                <div class="campus-image">
+                    <img src="assets/5.png" alt="Art Studios">
+                    <div class="campus-overlay">
+                        <h4>Art Studios</h4>
+                        <p>Dedicated spaces for painting, drawing, and handwork</p>
+                    </div>
+                </div>
+                
+                <div class="campus-image">
+                    <img src="assets/6.png" alt="Outdoor Learning Areas">
+                    <div class="campus-overlay">
+                        <h4>Outdoor Learning</h4>
+                        <p>Gardens, nature trails, and outdoor classrooms</p>
+                    </div>
+                </div>
+                
+                <div class="campus-image">
+                    <img src="assets/2.png" alt="Music Room">
+                    <div class="campus-overlay">
+                        <h4>Music Room</h4>
+                        <p>Instruments and space for musical exploration</p>
+                    </div>
+                </div>
+                
+                <div class="campus-image">
+                    <img src="assets/3.png" alt="Library">
+                    <div class="campus-overlay">
+                        <h4>School Library</h4>
+                        <p>Extensive collection of children's literature</p>
+                    </div>
+                </div>
+                
+                <div class="campus-image">
+                    <img src="assets/4.png" alt="Playground">
+                    <div class="campus-overlay">
+                        <h4>Natural Playground</h4>
+                        <p>Wooden structures and natural play elements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>Maitreya Pathshala</h3>
+                        <p>The Pokhara Waldorf School</p>
+                    </div>
+                    <p>Providing quality Waldorf education with experienced faculty for holistic development.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/maitreyapathshala" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Follow us on Facebook
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="parent-education.html">Parent Education</a></li>
+
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Maitreya Pathshala, Pokhara, Nepal</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+977 123-456-7890</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@maitreyapathshala.edu.np</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Sun-Fri: 9:00 AM - 5:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maitreya Pathshala - The Pokhara Waldorf School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

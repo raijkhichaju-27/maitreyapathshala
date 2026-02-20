@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Maitreya Pathshala</title>
+
+    <meta name="description" content="Maitreya Pathshala - The Pokhara Waldorf School providing holistic Waldorf education for children in Nepal.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lanchitas&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Maitreya Pathshala Logo" class="logo-img">
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="index.html">HOME</a>
+                <a href="blog.html">BLOG</a>
+                <a href="gallery.html" class="active">GALLERY</a>
+                <a href="admissions.html">ADMISSIONS</a>
+                <a href="about.html">ABOUT US</a>
+                    <a href="parent-education.html">PARENT EDUCATION</a>
+            </nav>
+
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="index.html">HOME</a>
+                    <a href="blog.html">BLOG</a>
+                    <a href="gallery.html" class="active">GALLERY</a>
+                    <a href="admissions.html">ADMISSIONS</a>
+                    <a href="about.html">ABOUT US</a>
+                        <a href="parent-education.html">PARENT EDUCATION</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- GALLERY HERO -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Life at Maitreya Pathshala</h1>
+            <p>Capturing moments of learning, creativity, and community in our Waldorf school</p>
+        </div>
+    </section>
+
+    <!-- GALLERY CONTENT -->
+    <section class="gallery-content">
+        <div class="container">
+            <!-- Filter Dropdown for Mobile -->
+            <div class="filter-dropdown">
+                <select class="filter-select" id="filterSelect">
+                    <option value="all">All Photos</option>
+                    <option value="classroom">Classroom</option>
+                    <option value="activities">Activities</option>
+                    <option value="festivals">Festivals</option>
+                    <option value="campus">School</option>
+                </select>
+            </div>
+
+            <!-- Filter Buttons for Desktop -->
+            <div class="gallery-controls">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Photos</button>
+                    <button class="filter-btn" data-filter="classroom">Classroom</button>
+                    <button class="filter-btn" data-filter="activities">Activities</button>
+                    <button class="filter-btn" data-filter="festivals">Festivals</button>
+                    <button class="filter-btn" data-filter="campus">Campus</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="classroom">
+                    <img src="assets/1.png" alt="Waldorf Classroom">
+                    <div class="gallery-overlay">
+                        <h3>Waldorf Classroom</h3>
+                        <p>Natural materials and warm learning environment</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="activities">
+                    <img src="assets/2.png" alt="Music Activity">
+                    <div class="gallery-overlay">
+                        <h3>Music Education</h3>
+                        <p>Students learning musical instruments</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="festivals">
+                    <img src="assets/3.png" alt="Festival Celebration">
+                    <div class="gallery-overlay">
+                        <h3>Seasonal Festival</h3>
+                        <p>Celebrating nature's cycles together</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="classroom">
+                    <img src="assets/4.png" alt="Art Class">
+                    <div class="gallery-overlay">
+                        <h3>Art Class</h3>
+                        <p>Watercolor painting in Waldorf education</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="activities">
+                    <img src="assets/5.png" alt="Outdoor Learning">
+                    <div class="gallery-overlay">
+                        <h3>Outdoor Learning</h3>
+                        <p>Exploring nature in our campus</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="campus">
+                    <img src="assets/6.png" alt="School Campus">
+                    <div class="gallery-overlay">
+                        <h3>School </h3>
+                        <p>Beautiful natural surroundings for learning</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="festivals">
+                    <img src="assets/7.png" alt="Cultural Event">
+                    <div class="gallery-overlay">
+                        <h3>Cultural Event</h3>
+                        <p>Students performing in school events</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="classroom">
+                    <img src="assets/8.png" alt="Handwork">
+                    <div class="gallery-overlay">
+                        <h3>Handwork Class</h3>
+                        <p>Developing skills through practical work</p>
+                    </div>
+                </div>
+                
+                <!-- Additional images for 3x3 grid -->
+                <div class="gallery-item" data-category="activities">
+                    <img src="assets/blog1.jpg" alt="Creative Arts">
+                    <div class="gallery-overlay">
+                        <h3>Creative Arts</h3>
+                        <p>Students engaged in artistic activities</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>Maitreya Pathshala</h3>
+                        <p>The Pokhara Waldorf School</p>
+                    </div>
+                    <p>Providing quality Waldorf education with experienced faculty for holistic development.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/maitreyapathshala" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Follow us on Facebook
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="parent-education.html">Parent Education</a></li>
+
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Maitreya Pathshala, Pokhara, Nepal</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+977 123-456-7890</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@maitreyapathshala.edu.np</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Sun-Fri: 9:00 AM - 5:00 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maitreya Pathshala - The Pokhara Waldorf School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+    </div>
+
+    <script src="gallery.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
