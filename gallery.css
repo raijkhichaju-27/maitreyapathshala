@@ -1,6 +1,6 @@
 /* Gallery Page Specific Styles */
 .gallery-hero {
-    background: linear-gradient(rgba(107, 50, 7, 0.9), rgba(107, 50, 7, 0.8)), url('assets/blog1.png');
+    background: linear-gradient(rgba(107, 50, 7, 0.6), rgba(107, 50, 7, 0.5)), url('assets/3.png');
     background-size: cover;
     background-position: center;
     color: white;

@@ -1,255 +1,439 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admissions | Maitreya Pathshala</title>
+    <title>Admissions - Maitreya Pathshala</title>
 
-    <meta
-      name="description"
-      content="Maitreya Pathshala - The Pokhara Waldorf School providing holistic Waldorf education for children in Nepal."
-    />
-
+    <meta name="description" content="Apply for admission at Maitreya Pathshala - The Pokhara Waldorf School.">
+    
     <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lanchitas&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Lanchitas&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css" />
-    <style>
-      .admissions-hero {
-        background:
-          linear-gradient(rgba(107, 50, 7, 0.9), rgba(107, 50, 7, 0.8)),
-          url("assets/blog1.png");
-        background-size: cover;
-        background-position: center;
-        color: white;
-        text-align: center;
-        padding: 100px 0;
-      }
-
-      .admissions-hero h1 {
-        font-family: "Lanchitas", cursive;
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-      }
-
-      .admissions-content {
-        padding: 80px 0;
-        background: #f9f9f9;
-      }
-
-      .form-container {
-        background: white;
-        padding: 40px;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .form-container iframe {
-        width: 100%;
-        height: 800px;
-        border: none;
-        border-radius: 10px;
-      }
-
-      .form-instructions {
-        text-align: center;
-        margin-bottom: 30px;
-        color: var(--gray);
-      }
-
-      @media (max-width: 768px) {
-        .admissions-hero {
-          padding: 80px 0;
-        }
-
-        .admissions-hero h1 {
-          font-size: 2.5rem;
-        }
-
-        .admissions-content {
-          padding: 60px 0;
-        }
-
-        .form-container {
-          padding: 20px;
-        }
-
-        .form-container iframe {
-          height: 600px;
-        }
-      }
-    </style>
-  </head>
-  <body>
+</head>
+<body>
     <!-- NAVBAR -->
     <header class="navbar">
-      <div class="container">
-        <div class="logo">
-          <img
-            src="assets/logo.png"
-            alt="Maitreya Pathshala Logo"
-            class="logo-img"
-          />
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Maitreya Pathshala Logo" class="logo-img">
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="index.html">HOME</a>
+                <a href="blog.html">BLOG</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="admissions.html" class="active">ADMISSIONS</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="parent-education.html">PARENT EDUCATION</a>
+            </nav>
+
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <nav class="mobile-nav">
+                    <a href="index.html">HOME</a>
+                    <a href="blog.html">BLOG</a>
+                    <a href="gallery.html">GALLERY</a>
+                    <a href="admissions.html" class="active">ADMISSIONS</a>
+                    <a href="about.html">ABOUT US</a>
+                    <a href="parent-education.html">PARENT EDUCATION</a>
+                </nav>
+            </div>
         </div>
-
-        <!-- Desktop Navigation -->
-        <nav class="desktop-nav">
-          <a href="index.html">HOME</a>
-          <a href="blog.html">BLOG</a>
-          <a href="gallery.html">GALLERY</a>
-          <a href="admissions.html" class="active">ADMISSIONS</a>
-          <a href="about.html">ABOUT US</a>
-          <a href="parent-education.html">PARENT EDUCATION</a>
-        </nav>
-
-        <!-- Mobile Navigation Toggle -->
-        <button class="mobile-nav-toggle">
-          <i class="fas fa-bars"></i>
-        </button>
-
-        <!-- Mobile Menu -->
-        <div class="mobile-menu">
-          <nav class="mobile-nav">
-            <a href="index.html">HOME</a>
-            <a href="blog.html">BLOG</a>
-            <a href="gallery.html">GALLERY</a>
-            <a href="admissions.html" class="active">ADMISSIONS</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="parent-education.html">PARENT EDUCATION</a>
-          </nav>
-        </div>
-      </div>
     </header>
 
-    <!-- ADMISSIONS HERO -->
-    <section class="admissions-hero">
-      <div class="container">
-        <h1>Admissions Process</h1>
-        <p>
-          Join our Waldorf learning community. Fill out the form below to begin
-          your journey.
-        </p>
-      </div>
+    <!-- PAGE HERO -->
+    <section class="page-hero admission-hero">
+        <div class="container">
+            <h1>Admission Application Form</h1>
+            <p>Join the Maitreya Pathshala family. Experience holistic Waldorf education.</p>
+        </div>
     </section>
 
-    <!-- ADMISSIONS CONTENT -->
-    <section class="admissions-content">
-      <div class="container">
-        <div class="form-instructions">
-          <h2>Application Form</h2>
-          <p>
-            Please fill out all required fields. We'll contact you within 3-5
-            business days.
-          </p>
-        </div>
+    <!-- ADMISSION FORM SECTION -->
+    <section class="admission-section">
+        <div class="container">
+            <div class="admission-container" id="admissionFormContainer">
+                <div class="form-header">
+                    <h2>Application Details</h2>
+                    <p class="required-note">Fields with (*) are compulsory.</p>
+                </div>
+                
+                <div id="formFeedback" class="form-feedback" style="display: none; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-weight: 600; text-align: center;"></div>
 
-        <div class="form-container">
-          <!-- Replace this iframe src with your Google Form embed URL -->
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSf_m68P1cT0EHxg_Zcu1Uz4QQJFW06BpGvGDZQWkADBn2shug/viewform?usp=publish-editor"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-          >
-            Loading…
-          </iframe>
-        </div>
+                <form id="admissionForm" class="admission-form">
+                    
+                    <!-- Student's Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user-graduate"></i> Student's Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="studentName">Name of the Applicant (Full Name)*</label>
+                                <input type="text" id="studentName" name="studentName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="appliedGrade">Applied for Grade*</label>
+                                <input type="text" id="appliedGrade" name="appliedGrade" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="currentGrade">Current Grade</label>
+                                <input type="text" id="currentGrade" name="currentGrade">
+                            </div>
 
-        <div class="form-instructions" style="margin-top: 40px">
-          <h3>Need Help?</h3>
-          <p>
-            Contact our admissions office at
-            <strong>+977 123-456-7890</strong> or
-            <strong>admissions@maitreyapathshala.edu.np</strong>
-          </p>
+                            <div class="form-group">
+                                <label>Gender*</label>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="gender" value="Male" required> <span>Male</span></label>
+                                    <label class="radio-label"><input type="radio" name="gender" value="Female" required> <span>Female</span></label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="nationality">Nationality</label>
+                                <input type="text" id="nationality" name="nationality">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="studentEmail">Email (Optional)</label>
+                                <input type="email" id="studentEmail" name="studentEmail">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dobBS">Date of birth (BS)*</label>
+                                <input type="text" id="dobBS" name="dobBS" placeholder="YYYY-MM-DD" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dobAD">Date of birth (AD)*</label>
+                                <input type="date" id="dobAD" name="dobAD" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="number" id="age" name="age" min="3" max="20">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="address">Address*</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone*</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Father's Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user-tie"></i> Father's Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="fatherName">Father's Name*</label>
+                                <input type="text" id="fatherName" name="fatherName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fatherMobile">Mobile No.*</label>
+                                <input type="tel" id="fatherMobile" name="fatherMobile" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fatherEmail">Email (Optional)</label>
+                                <input type="email" id="fatherEmail" name="fatherEmail">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="fatherOccupation">Occupation</label>
+                                <input type="text" id="fatherOccupation" name="fatherOccupation">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mother's Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user-nurse"></i> Mother's Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="motherName">Mother's Name*</label>
+                                <input type="text" id="motherName" name="motherName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="motherMobile">Mobile No.</label>
+                                <input type="tel" id="motherMobile" name="motherMobile">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="motherEmail">Email (Optional)</label>
+                                <input type="email" id="motherEmail" name="motherEmail">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="motherOccupation">Occupation</label>
+                                <input type="text" id="motherOccupation" name="motherOccupation">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Local Guardian's Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user-shield"></i> Local Guardian's Information (Optional)</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="guardianName">Local Guardian's Name</label>
+                                <input type="text" id="guardianName" name="guardianName">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guardianMobile">Mobile No.</label>
+                                <input type="tel" id="guardianMobile" name="guardianMobile">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="guardianEmail">Email (Optional)</label>
+                                <input type="email" id="guardianEmail" name="guardianEmail">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="guardianOccupation">Occupation</label>
+                                <input type="text" id="guardianOccupation" name="guardianOccupation">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previous School's Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-school"></i> Previous School's Information (Optional)</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="prevSchoolName">School Name</label>
+                                <input type="text" id="prevSchoolName" name="prevSchoolName">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prevSchoolAddress">Address</label>
+                                <input type="text" id="prevSchoolAddress" name="prevSchoolAddress">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prevSchoolGPA">GPA</label>
+                                <input type="text" id="prevSchoolGPA" name="prevSchoolGPA">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Queries -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-question-circle"></i> Additional Information</h3>
+                        <div class="form-group full-width">
+                            <label for="queries">Write your query (if any)</label>
+                            <textarea id="queries" name="queries" rows="4" placeholder="Any questions or additional information..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" id="submitBtn" class="cta primary submit-btn">
+                            <span id="btnText">Submit Application & Download PDF</span>
+                            <span id="btnLoader" style="display: none;"><i class="fas fa-spinner fa-spin"></i> Processing...</span>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-col">
-            <div class="footer-logo">
-              <h3>Maitreya Pathshala</h3>
-              <p>The Pokhara Waldorf School</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h3>Maitreya Pathshala</h3>
+                        <p>The Pokhara Waldorf School</p>
+                    </div>
+                    <p>Providing quality Waldorf education with experienced faculty for holistic development.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/maitreyapathshala" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Follow us on Facebook
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="parent-education.html">Parent Education</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Maitreya Pathshala, Pokhara, Nepal</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+977 123-456-7890</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@maitreyapathshala.edu.np</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Sun-Fri: 9:00 AM - 5:00 PM</span></li>
+                    </ul>
+                </div>
             </div>
-            <p>
-              Providing quality Waldorf education with experienced faculty for
-              holistic development.
-            </p>
-            <div class="footer-social">
-              <a
-                href="https://www.facebook.com/maitreyapathshala"
-                target="_blank"
-              >
-                <i class="fab fa-facebook-f"></i> Follow us on Facebook
-              </a>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Maitreya Pathshala - The Pokhara Waldorf School. All Rights Reserved.</p>
             </div>
-          </div>
-
-          <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="admissions.html">Admissions</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="parent-education.html">Parent Education</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Contact Info</h4>
-            <ul class="contact-info">
-              <li>
-                <i class="fas fa-map-marker-alt"></i>
-                <span>Maitreya Pathshala, Pokhara, Nepal</span>
-              </li>
-              <li>
-                <i class="fas fa-phone"></i> <span>+977 123-456-7890</span>
-              </li>
-              <li>
-                <i class="fas fa-envelope"></i>
-                <span>info@maitreyapathshala.edu.np</span>
-              </li>
-              <li>
-                <i class="fas fa-clock"></i>
-                <span>Sun-Fri: 9:00 AM - 5:00 PM</span>
-              </li>
-            </ul>
-          </div>
         </div>
-
-        <div class="footer-bottom">
-          <p>
-            &copy; 2024 Maitreya Pathshala - The Pokhara Waldorf School. All
-            Rights Reserved.
-          </p>
-        </div>
-      </div>
     </footer>
 
     <!-- SCROLL TO TOP -->
     <button class="scroll-top">
-      <i class="fas fa-chevron-up"></i>
+        <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- html2pdf.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
     <script src="script.js"></script>
-  </body>
+    <script>
+        document.getElementById('admissionForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); // Stop standard submission
+
+            const form = this;
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const btnLoader = document.getElementById('btnLoader');
+            const formFeedback = document.getElementById('formFeedback');
+            const formContainer = document.getElementById('admissionFormContainer');
+            
+            // Email configuration
+            const emailToTarget = 'sandiproka324@gmail.com';
+
+            // Start Loading State
+            submitBtn.disabled = true;
+            btnText.style.display = 'none';
+            btnLoader.style.display = 'inline-block';
+            formFeedback.style.display = 'none';
+
+            // 1. Scroll to top to prevent html2canvas blank render issue
+            window.scrollTo(0, 0);
+
+            // 2. Freeze all form inputs to explicit HTML attributes so html2canvas captures them
+            const inputs = formContainer.querySelectorAll('input, textarea, select');
+            inputs.forEach(input => {
+                if (input.tagName === 'TEXTAREA') {
+                    input.innerHTML = input.value;
+                } else if (input.type === 'radio' || input.type === 'checkbox') {
+                    if (input.checked) input.setAttribute('checked', 'checked');
+                    else input.removeAttribute('checked');
+                } else {
+                    input.setAttribute('value', input.value);
+                }
+            });
+
+            // 3. Hide the submit button area completely so it doesn't appear in the PDF
+            const formActions = document.querySelector('.form-actions');
+            formActions.style.display = 'none';
+
+            // Collect Form Data into an object for FormSubmit
+            const formData = new FormData(form);
+            const formObj = {};
+            formData.forEach((value, key) => { formObj[key] = value });
+
+            try {
+                // Configure html2pdf options
+                const pdfOptions = {
+                    margin:       10,
+                    filename:     'Maitreya_Admission_Form_' + formObj.studentName.replace(/\s+/g, '_') + '.pdf',
+                    image:        { type: 'jpeg', quality: 0.98 },
+                    html2canvas:  { scale: 2, scrollY: 0 },
+                    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                };
+
+                // 1. Generate PDF and trigger download for the user
+                html2pdf().set(pdfOptions).from(formContainer).save();
+
+                // 2. Generate PDF Blob to send via email
+                const pdfBlob = await html2pdf().set(pdfOptions).from(formContainer).outputPdf('blob');
+                
+                // 4. Restore the submit button area immediately after PDF generation is queued
+                formActions.style.display = 'block';
+
+                // 3. Prepare data for FormSubmit.co via AJAX
+                const sendData = new FormData();
+                
+                // Add required FormSubmit parameters
+                sendData.append('_subject', 'New Admission Application: ' + formObj.studentName);
+                sendData.append('_captcha', 'false'); // Disable captcha for AJAX
+                sendData.append('_template', 'table');
+                
+                // Append all form fields
+                for (const key in formObj) {
+                    sendData.append(key, formObj[key]);
+                }
+
+                // Append the generated PDF as an attachment
+                sendData.append('attachment', pdfBlob, pdfOptions.filename);
+
+                // Send the AJAX request to FormSubmit
+                const response = await fetch('https://formsubmit.co/ajax/' + emailToTarget, {
+                    method: 'POST',
+                    body: sendData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    if(result.success == "false" || result.success == false) {
+                        throw new Error(result.message || "Failed to send application.");
+                    }
+                    
+                    formFeedback.textContent = "Application submitted successfully! Your PDF is downloading.";
+                    formFeedback.style.backgroundColor = "#d1fae5";
+                    formFeedback.style.color = "#065f46";
+                    formFeedback.style.border = "1px solid #10b981";
+                    formFeedback.style.display = "block";
+                    
+                    form.reset();
+                } else {
+                    throw new Error("Server responded with an error.");
+                }
+
+            } catch (error) {
+                console.error('Submission Error:', error);
+                formFeedback.textContent = "An error occurred while submitting your application. Please try again. (" + error.message + ")";
+                formFeedback.style.backgroundColor = "#fee2e2";
+                formFeedback.style.color = "#991b1b";
+                formFeedback.style.border = "1px solid #ef4444";
+                formFeedback.style.display = "block";
+            } finally {
+                // Restore button state
+                submitBtn.disabled = false;
+                btnText.style.display = 'inline-block';
+                btnLoader.style.display = 'none';
+                
+                // Scroll to top of the form slightly to see the message
+                formContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    </script>
+</body>
 </html>

@@ -16,7 +16,7 @@
     <style>
         /* About Page Specific Styles */
         .about-hero {
-            background: linear-gradient(rgba(107, 50, 7, 0.9), rgba(107, 50, 7, 0.8)), url('assets/blog1.png');
+            background: linear-gradient(rgba(107, 50, 7, 0.6), rgba(107, 50, 7, 0.5)), url('assets/8.png');
             background-size: cover;
             background-position: center;
             color: white;
@@ -198,7 +198,7 @@
         /* Team Section */
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
@@ -217,14 +217,14 @@
         }
         
         .member-image {
-            height: 250px;
+            width: 100%;
             overflow: hidden;
         }
         
         .member-image img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            display: block;
             transition: transform 0.5s;
         }
         
@@ -233,7 +233,7 @@
         }
         
         .member-info {
-            padding: 25px;
+            padding: 15px;
         }
         
         .member-info h4 {
@@ -443,6 +443,11 @@
                 grid-template-columns: 1fr;
             }
             
+            /* Hide the teacher description on mobile */
+            .team-member .member-info p {
+                display: none;
+            }
+            
             .mission-card h3, .vision-card h3 {
                 font-size: 1.5rem;
             }
@@ -459,6 +464,15 @@
             .value-icon i {
                 font-size: 2rem;
             }
+        }
+
+        /* Constrain image height on all breakpoints so faces don't get super zoomed */
+        .member-image {
+            height: 300px; /* Force a consistent height */
+        }
+        .member-image img {
+            height: 100% !important;
+            object-fit: cover; /* Important to keep the image centered and cropped nicely */
         }
     </style>
 </head>
@@ -541,50 +555,50 @@
             
             <div class="history-timeline">
                 <div class="timeline-item">
-                    <div class="timeline-year">2010</div>
+                    <div class="timeline-year">2011</div>
                     <div class="timeline-content">
                         <h4>Foundation & Inception</h4>
-                        <p>Maitreya Pathshala was founded by a group of educators passionate about bringing Waldorf education to Pokhara. Started with just 15 students and 3 teachers in a small rented building.</p>
+                        <p>The seed of anthroposophy sprouted in Pokhara with the biodynamic farm on 8 acres of land, driven by the great heart of Babita Tulachan Kayastha. Supported by Ritman Gurung and Bishnu Kumari Sherchan, the farm supplied its products to the community and created a small anthroposophical community with programs, seminars, workshops, and study.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-year">2013</div>
+                    <div class="timeline-year">2014</div>
                     <div class="timeline-content">
-                        <h4>First Permanent Campus</h4>
-                        <p>Acquired our current campus location and began construction of purpose-built Waldorf classrooms, art studios, and outdoor learning spaces designed for holistic education.</p>
+                        <h4>Waldorf Kindergarten Opens</h4>
+                        <p>The anthroposophical community organically requested for the Waldorf Kindergarten. The door of Waldorf education opened with 15 children and 3 teachers in Pokhara. Since then, we have upgraded one grade every year.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-year">2016</div>
+                    <div class="timeline-year">2015</div>
                     <div class="timeline-content">
-                        <h4>Curriculum Expansion</h4>
-                        <p>Expanded our program to include Grades 4-6 and introduced specialized Waldorf teacher training programs for our faculty, enhancing educational quality and consistency.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-year">2019</div>
-                    <div class="timeline-content">
-                        <h4>Community Recognition</h4>
-                        <p>Received recognition from the Nepal Waldorf Association for excellence in implementing Waldorf pedagogy. Student enrollment grew to over 200 students across all grades.</p>
+                        <h4>Starting Grade 1</h4>
+                        <p>We started our grade 1 with Ritman Gurung as a class teacher.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-year">2022</div>
                     <div class="timeline-content">
-                        <h4>Modern Facilities & Technology</h4>
-                        <p>Completed construction of new science labs, music rooms, and computer facilities while maintaining Waldorf's balance between technology and hands-on learning.</p>
+                        <h4>First Cycle Completed</h4>
+                        <p>Ritman Gurung finished his first cycle of class teaching.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-year">2024</div>
+                    <div class="timeline-year">2023</div>
                     <div class="timeline-content">
-                        <h4>Current Status & Future</h4>
-                        <p>Now serving 300+ students with 35+ dedicated faculty members. Planning expansion of high school program and international exchange partnerships with Waldorf schools worldwide.</p>
+                        <h4>High School Upgrade</h4>
+                        <p>We upgraded our school with high school for classes 9 and 10. Our school now offers education from kindergarten to grade 10.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h4>First SEE Board Examination</h4>
+                        <p>Three students of our school attended the SEE board examination of Nepal, and all three of them passed the examination successfully.</p>
                     </div>
                 </div>
             </div>
@@ -602,67 +616,78 @@
             <div class="team-grid">
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="assets/1.png" alt="Principal">
+                        <img src="assets/reet.png" alt="Mr. Ritman Gurung">
                     </div>
                     <div class="member-info">
                         <h4>Mr. Ritman Gurung</h4>
                         <div class="position">Co-Founder, Principal & Grade Teacher</div>
-                        <p>MA in Economics, Diploma in Eurythmy, currently studying Master in Eurythmy Therapy at Emerson College, UK. Brings 20+ years of Waldorf experience combining academics with eurythmy.</p>
+                        <p>MA in Economics & Eurythmy Diploma. Brings 20+ years of Waldorf experience combining academics with eurythmy.</p>
                     </div>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="assets/2.png" alt="Kindergarten Teacher">
+                        <img src="assets/bishnu.png" alt="Ms. Bishnu Kumari Sherchan">
                     </div>
                     <div class="member-info">
                         <h4>Ms. Bishnu Kumari Sherchan</h4>
                         <div class="position">Co-Founder & Early Childhood Educator</div>
-                        <p>MA in Anthropology. Specializes in early childhood Waldorf education, creating nurturing environments for play-based learning and imagination development.</p>
+                        <p>MA in Anthropology. Specializes in early childhood learning and nurturing play-based environments.</p>
                     </div>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="assets/3.png" alt="Music Teacher">
+                        <img src="assets/aasha.png" alt="Ms. Asha Devi Dura">
                     </div>
                     <div class="member-info">
                         <h4>Ms. Asha Devi Dura</h4>
                         <div class="position">Grade Teacher & Arts Educator</div>
-                        <p>Master in Education, TU. Professional musician and Waldorf arts educator. Integrates music, movement, and visual arts across the curriculum.</p>
+                        <p>Master in Education, TU. Musician and Waldorf arts educator integrating music and movement.</p>
                     </div>
                 </div>
                 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="assets/4.png" alt="Grade Teacher">
+                        <img src="assets/pratichhya.png" alt="Pratichya Gurung">
                     </div>
                     <div class="member-info">
                         <h4>Pratichya Gurung</h4>
                         <div class="position">Grade Teacher & Eurythmist</div>
-                        <p>Currently studying Bachelor in Education. Brings eurythmy and experiential learning to the classroom through Waldorf's holistic approach.</p>
+                        <p>BEd Candidate. Fosters experiential learning and holistic development through Eurythmy.</p>
                     </div>
                 </div>
 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="assets/4.png" alt="Grade Teacher">
+                        <img src="assets/jyoti.png" alt="Jyoti Sherchan">
                     </div>
                     <div class="member-info">
                         <h4>Jyoti Sherchan</h4>
                         <div class="position">Grade Teacher</div>
-                        <p>Master in Pharmacy. Brings a unique scientific perspective to Waldorf education, making learning experiential and wonder-filled.</p>
+                        <p>Master in Pharmacy. Brings a unique, experiential scientific perspective to Waldorf education.</p>
                     </div>
                 </div>
 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="assets/4.png" alt="Grade Teacher">
+                        <img src="assets/ram rana.jpeg" alt="Ram Rana">
                     </div>
                     <div class="member-info">
                         <h4>Ram Rana</h4>
                         <div class="position">Grade Teacher</div>
-                        <p>Currently studying Bachelor in Tourism. Brings diverse perspectives and enthusiasm to the Waldorf classroom.</p>
+                        <p>BTsm Candidate. Brings diverse perspectives and enthusiasm to the Waldorf classroom.</p>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="assets/Bishnu Shrestha.png" alt="Bishnu Thapa Shrestha">
+                    </div>
+                    <div class="member-info">
+                        <h4>Bishnu Thapa Shrestha</h4>
+                        <div class="position">Grade Teacher</div>
+                        <p>Bachelor in Management. Provides organizational excellence and creative teaching methods.</p>
                     </div>
                 </div>
 
@@ -673,18 +698,7 @@
                     <div class="member-info">
                         <h4>Shristi Thapa Magar</h4>
                         <div class="position">Grade Teacher</div>
-                        <p>Currently studying Bachelor in Education. Passionate about child-centered learning and holistic development.</p>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="assets/4.png" alt="Grade Teacher">
-                    </div>
-                    <div class="member-info">
-                        <h4>Bishnu Thapa Shrestha</h4>
-                        <div class="position">Grade Teacher</div>
-                        <p>Bachelor in Management. Brings organizational excellence and creative teaching methods to the classroom.</p>
+                        <p>BEd Candidate. Passionate about child-centered learning and holistic student development.</p>
                     </div>
                 </div>
 
@@ -695,7 +709,7 @@
                     <div class="member-info">
                         <h4>Basanta Baral</h4>
                         <div class="position">High School Math Teacher</div>
-                        <p>M.Sc. NRM, M.A. Sociology, MPGD. Makes mathematics experiential and accessible through Waldorf's phenomenological approach.</p>
+                        <p>M.Sc. & M.A. Makes mathematics experiential through the Waldorf phenomenological approach.</p>
                     </div>
                 </div>
 
@@ -706,7 +720,7 @@
                     <div class="member-info">
                         <h4>Bishnu Parajuli</h4>
                         <div class="position">High School Language Teacher</div>
-                        <p>MA in Language. Brings language to life through storytelling, poetry, and the Waldorf method of immersive learning.</p>
+                        <p>MA in Language. Brings literature to life through poetry and immersive storytelling.</p>
                     </div>
                 </div>
 
@@ -717,7 +731,7 @@
                     <div class="member-info">
                         <h4>Roshan Maharjan</h4>
                         <div class="position">Music Teacher</div>
-                        <p>Professional musician specializing in Waldorf music education. Fosters musical appreciation and skill development in students.</p>
+                        <p>Professional musician fostering musical appreciation and skill development in students.</p>
                     </div>
                 </div>
 
@@ -728,68 +742,45 @@
                     <div class="member-info">
                         <h4>Suk Dev Nepali</h4>
                         <div class="position">Tai Chi Teacher</div>
-                        <p>Specializes in movement education and Tai Chi. Integrates mind-body awareness and purposeful movement into the curriculum.</p>
+                        <p>Integrates mind-body awareness and purposeful Tai Chi movement into the curriculum.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CAMPUS FACILITIES SECTION -->
+
+    <!-- PARENT PARTNERSHIP SECTION -->
     <section class="about-section">
         <div class="section-content">
             <div class="section-header">
-                <h2>Our Campus & Facilities</h2>
-                <p>A nurturing environment designed for holistic learning and growth</p>
+                <h2>Our Parent Partnership</h2>
+                <p>Education is a beautiful collaboration between families, teachers, and the school community</p>
             </div>
             
-            <div class="campus-gallery">
-                <div class="campus-image">
-                    <img src="assets/1.png" alt="Waldorf Classrooms">
-                    <div class="campus-overlay">
-                        <h4>Waldorf Classrooms</h4>
-                        <p>Natural materials, warm colors, and flexible learning spaces</p>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-home"></i>
                     </div>
+                    <h4>Supportive Home Rhythms</h4>
+                    <p>Creating a calm, orderly environment with limited media, nutritious foods, proper sleep, and plenty of room for creative, imaginative play.</p>
                 </div>
                 
-                <div class="campus-image">
-                    <img src="assets/5.png" alt="Art Studios">
-                    <div class="campus-overlay">
-                        <h4>Art Studios</h4>
-                        <p>Dedicated spaces for painting, drawing, and handwork</p>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
                     </div>
+                    <h4>Active Engagement</h4>
+                    <p>Familiarizing with Waldorf philosophy, attending parent education meetings, and volunteering services to strengthen our community.</p>
                 </div>
                 
-                <div class="campus-image">
-                    <img src="assets/6.png" alt="Outdoor Learning Areas">
-                    <div class="campus-overlay">
-                        <h4>Outdoor Learning</h4>
-                        <p>Gardens, nature trails, and outdoor classrooms</p>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-comments"></i>
                     </div>
-                </div>
-                
-                <div class="campus-image">
-                    <img src="assets/2.png" alt="Music Room">
-                    <div class="campus-overlay">
-                        <h4>Music Room</h4>
-                        <p>Instruments and space for musical exploration</p>
-                    </div>
-                </div>
-                
-                <div class="campus-image">
-                    <img src="assets/3.png" alt="Library">
-                    <div class="campus-overlay">
-                        <h4>School Library</h4>
-                        <p>Extensive collection of children's literature</p>
-                    </div>
-                </div>
-                
-                <div class="campus-image">
-                    <img src="assets/4.png" alt="Playground">
-                    <div class="campus-overlay">
-                        <h4>Natural Playground</h4>
-                        <p>Wooden structures and natural play elements</p>
-                    </div>
+                    <h4>Open Communication</h4>
+                    <p>Maintaining direct and frequent communication with teachers to share observations and provide a network of caring adults for the child.</p>
                 </div>
             </div>
         </div>
@@ -828,9 +819,9 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> <span>Maitreya Pathshala, Pokhara, Nepal</span></li>
-                        <li><i class="fas fa-phone"></i> <span>+977 123-456-7890</span></li>
-                        <li><i class="fas fa-envelope"></i> <span>info@maitreyapathshala.edu.np</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Khundahar, BP Marga, Pokhara-13</span></li>
+                        <li><i class="fas fa-phone"></i> <span>061580241</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>maitreyapathshala@gmail.com</span></li>
                         <li><i class="fas fa-clock"></i> <span>Sun-Fri: 9:00 AM - 5:00 PM</span></li>
                     </ul>
                 </div>
