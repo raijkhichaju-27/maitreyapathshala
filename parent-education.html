@@ -372,6 +372,72 @@
             font-size: 0.8rem;
         }
         
+        /* Training Section Styles */
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .training-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .training-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+        
+        .training-title {
+            color: var(--secondary);
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Lanchitas', cursive;
+        }
+        
+        .training-title i {
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+        
+        .training-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .training-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 18px;
+            color: var(--gray);
+            line-height: 1.6;
+            font-size: 1.05rem;
+        }
+        
+        .training-list li::before {
+            content: '\f105';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .training-list strong {
+            color: var(--secondary);
+            display: block;
+            margin-bottom: 4px;
+        }
+        
         /* Responsive Styles for Parent Education Page */
         @media (max-width: 1024px) {
             .community-content {
@@ -433,7 +499,7 @@
                 font-size: 1.8rem;
             }
             
-            .stages-grid, .workshop-grid, .grade-sessions, .commitment-grid {
+            .stages-grid, .workshop-grid, .grade-sessions, .commitment-grid, .training-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -484,149 +550,94 @@
     <section class="parent-hero">
         <div class="container">
             <h1>Parent Education</h1>
-            <p>Fostering a Collaborative Learning Community between Parents and Waldorf Education</p>
+            <p>A collaborative journey of meaningful relationships, Steiner-Waldorf pedagogy, and shared community.</p>
         </div>
     </section>
 
-    <!-- INTRODUCTION SECTION -->
+    <!-- SHARED JOURNEY HIGHLIGHT -->
+    <section class="parent-section" style="padding-bottom: 0;">
+        <div class="parent-content">
+            <div class="community-content" style="flex-direction: row-reverse; gap: 60px; align-items: center;">
+                <div class="community-text">
+                    <h2 style="font-family: 'Lanchitas', cursive; color: var(--secondary); font-size: 2.5rem; margin-bottom: 20px;">The Shared Journey</h2>
+                    <p>Education at Maitreya Pathshala is a deep partnership. We walk this path together with families, ensuring every child is seen, heard, and supported across both home and school. Our relationship with parents is the foundation of our students' growth.</p>
+                </div>
+                <div class="community-image" style="flex: 1;">
+                    <img src="assets/parent.jpeg" alt="Waldorf Parenting" style="border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="parent-section">
         <div class="parent-content">
             <div class="parent-header">
-                <h2>A Shared Journey</h2>
-                <p>At Maitreya Pathshala, education is a collaborative journey built on trust, respect, and shared intention.</p>
+                <h2>Parent Education & Community</h2>
+                <p>Raising children to become happy, healthy, thriving adults is a shared odyssey between families and school.</p>
             </div>
             
             <div class="intro-content">
-                <p>We believe that the journey of education is not confined to the classroom. Parents are the child's first teachers, and their active participation is vital to holistic development. To strengthen this partnership, we offer a thoughtful programme of parent education. Through parent and teacher education, we nurture a culture where every adult involved in a child's life is informed, inspired, and empowered to support their unfolding potential.</p>
+                <p>Maitreya Pathshala is designed to engage not only the students but their entire families. We believe in <strong>meaningful relationships</strong>, where our trained teachers work with families over multiple years, understanding how to best support each individual child. From home visits to one-to-one parent sessions and regular conferences, we connect school life and home life to support the whole family.</p>
             </div>
         </div>
     </section>
 
-    <!-- DEVELOPMENT STAGES SECTION -->
     <section class="parent-section">
         <div class="parent-content">
             <div class="parent-header">
-                <h2>Understanding Child Development</h2>
-                <p>We host a variety of sessions for parents across the school year, addressing developmental milestones at every stage of childhood</p>
+                <h2>Parent Education Series</h2>
+                <p>Deepening our understanding of Steiner-Waldorf pedagogy and child development through regular sessions and dialogue.</p>
             </div>
             
             <div class="stages-grid">
                 <div class="stage-card">
                     <div class="stage-icon">
-                        <i class="fas fa-baby"></i>
+                        <i class="fas fa-seedling"></i>
                     </div>
-                    <h3>Early Childhood Development</h3>
-                    <p>Supporting the unique needs and natural growth rhythms of young children. Learn about play-based learning, healthy routines, and creating nurturing home environments.</p>
+                    <h3>Core Philosophy</h3>
+                    <p>Why Waldorf "waits" on academics and how teaching the "Head, Heart, and Hands" builds resiliency and flexibility in students.</p>
                 </div>
                 
                 <div class="stage-card">
                     <div class="stage-icon">
-                        <i class="fas fa-child"></i>
+                        <i class="fas fa-home"></i>
                     </div>
-                    <h3>The Ninth-Year Threshold</h3>
-                    <p>A pivotal stage where children begin to experience a sense of individuality and emotional depth—also known as the "9-year change." Guidance for navigating this important transition.</p>
+                    <h3>Simplicity Parenting</h3>
+                    <p>Creating a peaceful home environment through healthy rhythms and our school's perspective on media and technology.</p>
                 </div>
                 
                 <div class="stage-card">
                     <div class="stage-icon">
-                        <i class="fas fa-user-graduate"></i>
+                        <i class="fas fa-users"></i>
                     </div>
-                    <h3>Adolescence and Beyond</h3>
-                    <p>Providing insights and strategies to navigate the complex emotional landscape of the teenage years. Communication techniques and supporting emerging independence.</p>
+                    <h3>Developmental Stages</h3>
+                    <p>Grade-specific sessions focusing on milestones from early childhood through the transformative high school years.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WORKSHOPS SECTION -->
+    <!-- COMMUNITY & ENGAGEMENT SECTION -->
     <section class="parent-section">
         <div class="parent-content">
             <div class="parent-header">
-                <h2>Skill-Based Parent Workshops</h2>
-                <p>In keeping with our hands-on Waldorf ethos, we offer creative and practical sessions for parents</p>
-            </div>
-            
-            <div class="workshop-grid">
-                <div class="workshop-card">
-                    <div class="workshop-image">
-                        <img src="assets/5.png" alt="Woodwork Workshop">
-                    </div>
-                    <div class="workshop-details">
-                        <h3>Woodwork and Artistic Activities</h3>
-                        <p>Enabling parents to engage with the crafts that form part of their child's learning journey. Learn basic woodworking, painting techniques, and handcrafts used in our curriculum.</p>
-                    </div>
-                </div>
-                
-                <div class="workshop-card">
-                    <div class="workshop-image">
-                        <img src="assets/3.png" alt="Study Group Session">
-                    </div>
-                    <div class="workshop-details">
-                        <h3>Parent Study Groups</h3>
-                        <p>Facilitating shared reading, dialogue, and reflection on parenting, education, and childhood development. Explore Waldorf philosophy and child development theories together.</p>
-                    </div>
-                </div>
-                
-                <div class="workshop-card">
-                    <div class="workshop-image">
-                        <img src="assets/2.png" alt="Seasonal Crafts">
-                    </div>
-                    <div class="workshop-details">
-                        <h3>Seasonal Crafts & Festivals</h3>
-                        <p>Learn to create seasonal decorations and understand the significance of Waldorf festivals. Bring the rhythm of the seasons into your home environment.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMMUNITY INVOLVEMENT SECTION -->
-    <section class="parent-section">
-        <div class="parent-content">
-            <div class="parent-header">
-                <h2>Community Involvement</h2>
-                <p>Building a supportive network of parents engaged in their children's education</p>
+                <h2>A Connected Community</h2>
+                <p>Events like our Spring Fair and home-school conferences are where our community truly comes to life.</p>
             </div>
             
             <div class="community-content">
                 <div class="community-text">
-                    <p>Many of our parents actively contribute to school life by sharing their expertise through guest talks, project sessions, or field trips. This enriches classroom learning with real-world insight and helps children see learning as a community-wide endeavour.</p>
-                    <p style="margin-top: 20px;">Parents can participate in classroom activities, assist with school festivals, join our parent council, or share professional skills that complement our curriculum. This collaborative approach strengthens the bond between home and school.</p>
+                    <p>At Maitreya Pathshala, we believe in a unified support system for every child. Our parents contribute through guest talks, <strong>artistic workshops (like woodwork and seasonal crafts)</strong>, and project sessions that enrich classroom learning.</p>
+                    <p style="margin-top: 20px;">We prioritize <strong>meaningful relationships</strong> through regular home visits and one-to-one parent conferences. By celebrating the rhythm of the seasons together—from house building to festival celebrations—we model purposeful community for our children.</p>
                 </div>
                 
                 <div class="community-image">
-                    <img src="assets/1.png" alt="Parent Community Activities">
+                    <img src="assets/parentgroup.jpeg" alt="Waldorf Community Events">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GRADE-SPECIFIC SESSIONS -->
-    <section class="parent-section">
-        <div class="parent-content">
-            <div class="parent-header">
-                <h2>Grade-Specific Parenting Sessions</h2>
-                <p>Age-appropriate guidance for each stage of your child's educational journey</p>
-            </div>
-            
-            <div class="grade-sessions">
-                <div class="grade-card">
-                    <h4>Kindergarten Parents</h4>
-                    <p>Understanding the importance of play, rhythm, and imitation in early childhood. Learn why Waldorf kindergarten is intentionally free of academic instruction, giving children time to be fully, joyfully young.</p>
-                </div>
-                
-                <div class="grade-card">
-                    <h4>Grade 1-8 Parents</h4>
-                    <p>Supporting the transition to formal learning and navigating the nine-year change. Understand the class teacher journey—where one dedicated teacher stays with the class—and support your child as their horizon expands outward from self to community.</p>
-                </div>
-                
-                <div class="grade-card">
-                    <h4>Class 9-10 Parents</h4>
-                    <p>Guiding through adolescence and academic challenges. Learn how we honor this profound transformation, providing intellectual rigor and SEE preparation without losing artistic wholeness and inner resilience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- OUR SHARED COMMITMENT SECTION -->
     <section class="parent-section">
@@ -639,43 +650,64 @@
             <div class="commitment-grid">
                 <!-- Home Rhythms -->
                 <div class="commitment-card">
-                    <div class="commitment-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Supportive Home Rhythms</h3>
+                    <div class="commitment-icon"><i class="fas fa-home"></i></div>
+                    <h3>Home Rhythms</h3>
                     <ul class="commitment-list">
-                        <li><strong>Proper Sleep:</strong> Ensuring at least 10 hours of sleep, particularly on school nights.</li>
-                        <li><strong>Wholesome Nutrition:</strong> Starting the day with a healthy and nutritious breakfast.</li>
-                        <li><strong>Mindful Media:</strong> Limiting TV and digital exposure to protect the magic of childhood wonder.</li>
-                        <li><strong>Enforcing Boundaries:</strong> Setting age-appropriate behavioral boundaries with loving authority.</li>
+                        <li><strong>Sleep:</strong> At least 10 hours for proper rest.</li>
+                        <li><strong>Nutrition:</strong> A healthy breakfast to start the day.</li>
+                        <li><strong>Media:</strong> Limiting digital exposure for wonder.</li>
+                        <li><strong>Boundaries:</strong> Setting age-appropriate limits.</li>
                     </ul>
                 </div>
                 
                 <!-- Active Participation -->
                 <div class="commitment-card">
-                    <div class="commitment-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
+                    <div class="commitment-icon"><i class="fas fa-users"></i></div>
                     <h3>Active Participation</h3>
                     <ul class="commitment-list">
-                        <li><strong>School Life:</strong> Attending parent meetings, seasonal festivals, and school activities.</li>
-                        <li><strong>Prompt Presence:</strong> Bringing children to school on time and in proper dress.</li>
-                        <li><strong>Community Support:</strong> Volunteering services to the school—no contribution is too small.</li>
-                        <li><strong>Involvement:</strong> Reading all correspondence and keeping contact details up to date.</li>
+                        <li><strong>Events:</strong> Attending meetings and festivals.</li>
+                        <li><strong>Presence:</strong> On-time arrival and proper dress.</li>
+                        <li><strong>Service:</strong> Volunteering for school activities.</li>
+                        <li><strong>Newsletter:</strong> Reading school correspondence.</li>
                     </ul>
                 </div>
                 
                 <!-- Communication & Trust -->
                 <div class="commitment-card">
-                    <div class="commitment-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Communication & Trust</h3>
+                    <div class="commitment-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Communication</h3>
                     <ul class="commitment-list">
-                        <li><strong>Open Channels:</strong> Maintaining direct and frequent communication with your child's teacher.</li>
-                        <li><strong>Mutual Respect:</strong> Protecting children from adult conversations and sensitive school matters.</li>
-                        <li><strong>Collaborative Growth:</strong> Sharing observations and feedback to support individual development.</li>
-                        <li><strong>Conflict Resolution:</strong> Using direct communication to find meaningful and timely solutions.</li>
+                        <li><strong>Directness:</strong> Open dialogue with teachers.</li>
+                        <li><strong>Respect:</strong> Protecting childhood from adult topics.</li>
+                        <li><strong>Growth:</strong> Sharing feedback for development.</li>
+                        <li><strong>Resolution:</strong> Collaborative problem solving.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEACHER TRAINING SECTION -->
+    <section class="parent-section">
+        <div class="parent-content">
+            <div class="parent-header">
+                <h2>Teacher Excellence</h2>
+                <p>Our educators are dedicated mentors who evolve alongside the children.</p>
+            </div>
+            
+            <div class="training-card" style="max-width: 900px; margin: 40px auto 0;">
+                <div class="training-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Continuous Growth & Pedagogy</span>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <ul class="training-list">
+                        <li><strong>Holistic Training:</strong> Deep focus on child psychology and Waldorf principles.</li>
+                        <li><strong>International Mentorship:</strong> Workshops with global experts like Michal Ben Shalom.</li>
+                    </ul>
+                    <ul class="training-list">
+                        <li><strong>Local Insight:</strong> Aligning Waldorf traditions with Nepal's National Education Policy.</li>
+                        <li><strong>Inner Growth:</strong> Weekly child study and sessions with Ritman Gurung (Eurythmy Therapy).</li>
                     </ul>
                 </div>
             </div>

@@ -136,6 +136,38 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// MODAL FUNCTIONALITY
+function openModal(modalId) {
+    const modal = document.getElementById('modal-' + modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.classList.add('modal-open');
+    }
+}
+
+function closeModal() {
+    const activeModal = document.querySelector('.modal-overlay.active');
+    if (activeModal) {
+        activeModal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+    }
+}
+
+// Close modal when clicking outside content
+document.addEventListener('click', (e) => {
+    const activeModal = document.querySelector('.modal-overlay.active');
+    if (activeModal && e.target === activeModal) {
+        closeModal();
+    }
+});
+
+// Close modal on escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
+
 // Animation on scroll
 const observerOptions = {
     threshold: 0.1,

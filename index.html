@@ -154,6 +154,13 @@
                     <p>Monthly meetings and progress reports for continuous improvement</p>
                 </div>
             </div>
+
+            <!-- JOURNEY TRIGGER -->
+            <div style="text-align: center; margin-top: 50px;">
+                <button class="cta primary" onclick="openModal('journey')" style="padding: 12px 35px; border-radius: 50px; font-size: 1rem; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-history"></i> Learn Our Journey
+                </button>
+            </div>
         </div>
     </section>
 
@@ -166,28 +173,31 @@
             </div>
             
             <div class="programs-grid">
-                <div class="program-card">
+                <div class="program-card" onclick="openModal('kindergarten')">
                     <div class="program-icon">
                         <i class="fas fa-baby"></i>
                     </div>
                     <h3>Waldorf Kindergarten</h3>
-                    <p>Ages 3-6 | A sanctuary of wonder, warmth, and unhurried childhood rooted in rhythms of nature and magic of play.</p>
+                    <p>Ages 3-6 | A sanctuary of wonder, warmth, and unhurried childhood rooted in rhythms of nature.</p>
+                    <span class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></span>
                 </div>
                 
-                <div class="program-card">
+                <div class="program-card" onclick="openModal('schooling')">
                     <div class="program-icon">
                         <i class="fas fa-child"></i>
                     </div>
                     <h3>Grade 1-8</h3>
                     <p>A living education through meaning, artistic richness, and developmentally attuned main lesson blocks.</p>
+                    <span class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></span>
                 </div>
                 
-                <div class="program-card">
+                <div class="program-card" onclick="openModal('highschool')">
                     <div class="program-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h3>Class 9-10</h3>
                     <p>Age 14-16 | A rigorous and holistic curriculum emphasizing integration, depth, and SEE preparation.</p>
+                    <span class="learn-more-btn">Learn More <i class="fas fa-arrow-right"></i></span>
                 </div>
             </div>
         </div>
@@ -239,6 +249,139 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODALS SECTION -->
+    <!-- Waldorf Kindergarten Modal -->
+    <div class="modal-overlay" id="modal-kindergarten">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Waldorf Kindergarten</h2>
+                <div class="modal-close" onclick="closeModal()">&times;</div>
+            </div>
+            <div class="modal-body">
+                <h3>A Place Where Childhood Blooms</h3>
+                <p>At Maitreya Pathshala our kindergarten is a sanctuary of wonder, warmth, and unhurried childhood. We offer children ages 3 to 6 an education rooted in the rhythms of nature, the magic of play, and the wisdom of the Waldorf tradition.</p>
+                
+                <h3>The Heart of Early Childhood</h3>
+                <p>We believe childhood is not a preparation for life — it is life. Children learn through imaginative play, seasonal rhythms, and loving imitation. We do not rush children into academics; instead, we give them time to be fully, joyfully young.</p>
+                
+                <ul>
+                    <li><strong>Rhythm & Beauty:</strong> Each day follows a gentle flow — like breathing in and out — providing inner security.</li>
+                    <li><strong>Learning Through Play:</strong> Free play builds creativity, problem-solving, and emotional resilience.</li>
+                    <li><strong>Natural Materials:</strong> Our rooms are filled with wool, wood, silk, and stones to invite imagination.</li>
+                    <li><strong>Rooted in Nature:</strong> We celebrate seasonal festivals and connect children to the living world.</li>
+                </ul>
+                
+                <h3>No Academics — And Here's Why</h3>
+                <p>Young children learn through their senses and movement, not abstract thinking. Trusting the child's natural unfolding allows them to become stronger, more joyful learners in the long run.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grade 1-8 Modal -->
+    <div class="modal-overlay" id="modal-schooling">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Grade 1 to 8</h2>
+                <div class="modal-close" onclick="closeModal()">&times;</div>
+            </div>
+            <div class="modal-body">
+                <h3>The Journey Through Childhood</h3>
+                <p>Our Classes 1 through 8 offer a deeply meaningful, artistically rich, and developmentally attuned education. This is not education as information transfer — it is transformation.</p>
+                
+                <h3>One Teacher, Eight Years</h3>
+                <p>A distinctive feature is the class teacher who stays with the same group of children from Class 1 through Class 8. This creates a profound bond of trust and a continuous, coherent educational journey.</p>
+                
+                <h3>The Rhythm of Learning</h3>
+                <p>Engagement happens through main lesson blocks — 3 to 4 weeks of deep diving into a single subject. Every lesson integrates storytelling, artistic work, and movement to engage the whole child.</p>
+                
+                <ul>
+                    <li><strong>Class 1-2:</strong> Fairy tales, fables, and legends speak directly to the child's inner life.</li>
+                    <li><strong>Class 3-5:</strong> Human history, ancient civilizations, and practical skills like farming and building.</li>
+                    <li><strong>Class 6-8:</strong> Awakening of cause and effect, physics, Rome, Renaissance, and the Modern World.</li>
+                </ul>
+                
+                <h3>Artistic & Practical Life</h3>
+                <p>Painting, drawing, music, handwork, and Eurythmy are woven into every subject, developing thinking, feeling, and willpower in equal measure.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Class 9-10 Modal -->
+    <div class="modal-overlay" id="modal-highschool">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Class 9 & 10</h2>
+                <div class="modal-close" onclick="closeModal()">&times;</div>
+            </div>
+            <div class="modal-body">
+                <h3>Idealism and Critical Awakening</h3>
+                <p>Students begin to judge the world and dream of how it could be. Our curriculum balances intellectual rigor with human warmth.</p>
+                
+                <h3>Synthesis & Depth</h3>
+                <p>Class 10 is a year of integration. Students bring together everything learned — academically, artistically, and humanly — and prepare to step into the wider world.</p>
+                
+                <ul>
+                    <li><strong>Advanced Academics:</strong> Rigorous studies in Algebra, Geometry, Physics, and Literature.</li>
+                    <li><strong>Class 10 Project:</strong> A significant independent research project presented to the community.</li>
+                    <li><strong>SEE Preparation:</strong> Thorough mock exams, past paper practice, and one-to-one support.</li>
+                    <li><strong>Wholeness:</strong> Drama productions and artistic life continue as essential practices, not luxuries.</li>
+                </ul>
+                
+                <h3>After Class 10</h3>
+                <p>Graduates leave with independent thinking, empathy, and the confidence to become who they are meant to be.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Journey Modal -->
+    <div class="modal-overlay" id="modal-journey">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Our Journey</h2>
+                <div class="modal-close" onclick="closeModal()">&times;</div>
+            </div>
+            <div class="modal-body">
+                <div class="journey-timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-date">2011</span>
+                        <div class="timeline-content">
+                            <h4>Foundation & Inception</h4>
+                            <p>The seed of anthroposophy sprouted in Pokhara with an 8-acre biodynamic farm started by Babita Tulachan Kayastha, supported by Ritman Gurung and Bishnu Kumari Sherchan.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2014</span>
+                        <div class="timeline-content">
+                            <h4>The Doors Open</h4>
+                            <p>Maitreya Pathshala opened with 15 children and 3 teachers, starting with the Waldorf Kindergarten.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2015</span>
+                        <div class="timeline-content">
+                            <h4>First Grade Starts</h4>
+                            <p>Our Class 1 began with Ritman Gurung as the class teacher, who completed his first cycle in 2022.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2023</span>
+                        <div class="timeline-content">
+                            <h4>High School Upgrade</h4>
+                            <p>We expanded our school to include Class 9 and 10, completing the full schooling cycle.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2025</span>
+                        <div class="timeline-content">
+                            <h4>SEE Excellence</h4>
+                            <p>Our first batch of three students attended and passed the SEE board examination of Nepal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- SCROLL TO TOP -->
     <button class="scroll-top">
