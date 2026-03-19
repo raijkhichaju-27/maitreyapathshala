@@ -303,6 +303,75 @@
             transform: translateY(-3px);
         }
         
+        /* Commitment Section Styles */
+        .commitment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .commitment-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .commitment-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .commitment-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(212, 115, 12, 0.1);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 1.8rem;
+        }
+        
+        .commitment-card h3 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-family: 'Lanchitas', cursive;
+        }
+        
+        .commitment-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        
+        .commitment-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .commitment-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+        
         /* Responsive Styles for Parent Education Page */
         @media (max-width: 1024px) {
             .community-content {
@@ -332,12 +401,12 @@
                 font-size: 2rem;
             }
             
-            .stages-grid, .workshop-grid, .grade-sessions {
+            .stages-grid, .workshop-grid, .grade-sessions, .commitment-grid {
                 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
                 gap: 20px;
             }
             
-            .stage-card, .workshop-card, .grade-card {
+            .stage-card, .workshop-card, .grade-card, .commitment-card {
                 padding: 25px 20px;
             }
             
@@ -364,7 +433,7 @@
                 font-size: 1.8rem;
             }
             
-            .stages-grid, .workshop-grid, .grade-sessions {
+            .stages-grid, .workshop-grid, .grade-sessions, .commitment-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -385,11 +454,11 @@
             <!-- Desktop Navigation -->
             <nav class="desktop-nav">
                 <a href="index.html">HOME</a>
-                <a href="blog.html">BLOG</a>
-                <a href="gallery.html">GALLERY</a>
-                <a href="admissions.html">ADMISSIONS</a>
                 <a href="about.html">ABOUT US</a>
+                <a href="admissions.html">ADMISSIONS</a>
+                <a href="gallery.html">GALLERY</a>
                 <a href="parent-education.html" class="active">PARENT EDUCATION</a>
+                <a href="blog.html">BLOG</a>
             </nav>
 
             <!-- Mobile Navigation Toggle -->
@@ -401,11 +470,11 @@
             <div class="mobile-menu">
                 <nav class="mobile-nav">
                     <a href="index.html">HOME</a>
-                    <a href="blog.html">BLOG</a>
-                    <a href="gallery.html">GALLERY</a>
-                    <a href="admissions.html">ADMISSIONS</a>
                     <a href="about.html">ABOUT US</a>
+                    <a href="admissions.html">ADMISSIONS</a>
+                    <a href="gallery.html">GALLERY</a>
                     <a href="parent-education.html" class="active">PARENT EDUCATION</a>
+                    <a href="blog.html">BLOG</a>
                 </nav>
             </div>
         </div>
@@ -559,6 +628,60 @@
         </div>
     </section>
 
+    <!-- OUR SHARED COMMITMENT SECTION -->
+    <section class="parent-section">
+        <div class="parent-content">
+            <div class="parent-header">
+                <h2>Our Shared Commitment</h2>
+                <p>Education is a collaborative journey between families, teachers, and school. We ask for a conscious commitment to support your child's growth and the school community.</p>
+            </div>
+            
+            <div class="commitment-grid">
+                <!-- Home Rhythms -->
+                <div class="commitment-card">
+                    <div class="commitment-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Supportive Home Rhythms</h3>
+                    <ul class="commitment-list">
+                        <li><strong>Proper Sleep:</strong> Ensuring at least 10 hours of sleep, particularly on school nights.</li>
+                        <li><strong>Wholesome Nutrition:</strong> Starting the day with a healthy and nutritious breakfast.</li>
+                        <li><strong>Mindful Media:</strong> Limiting TV and digital exposure to protect the magic of childhood wonder.</li>
+                        <li><strong>Enforcing Boundaries:</strong> Setting age-appropriate behavioral boundaries with loving authority.</li>
+                    </ul>
+                </div>
+                
+                <!-- Active Participation -->
+                <div class="commitment-card">
+                    <div class="commitment-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Active Participation</h3>
+                    <ul class="commitment-list">
+                        <li><strong>School Life:</strong> Attending parent meetings, seasonal festivals, and school activities.</li>
+                        <li><strong>Prompt Presence:</strong> Bringing children to school on time and in proper dress.</li>
+                        <li><strong>Community Support:</strong> Volunteering services to the school—no contribution is too small.</li>
+                        <li><strong>Involvement:</strong> Reading all correspondence and keeping contact details up to date.</li>
+                    </ul>
+                </div>
+                
+                <!-- Communication & Trust -->
+                <div class="commitment-card">
+                    <div class="commitment-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Communication & Trust</h3>
+                    <ul class="commitment-list">
+                        <li><strong>Open Channels:</strong> Maintaining direct and frequent communication with your child's teacher.</li>
+                        <li><strong>Mutual Respect:</strong> Protecting children from adult conversations and sensitive school matters.</li>
+                        <li><strong>Collaborative Growth:</strong> Sharing observations and feedback to support individual development.</li>
+                        <li><strong>Conflict Resolution:</strong> Using direct communication to find meaningful and timely solutions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CALL TO ACTION SECTION -->
     <section class="parent-section">
         <div class="parent-content">
@@ -591,11 +714,11 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="admissions.html">Admissions</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="parent-education.html">Parent Education</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
                 
