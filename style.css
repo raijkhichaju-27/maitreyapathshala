@@ -979,9 +979,20 @@ footer {
         justify-content: center;
     }
     
-    /* Hide hero image on mobile */
+    /* Show hero image on mobile */
     .hero-image-wrapper {
-        display: none;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .main-image {
+        border-radius: 15px;
+    }
+
+    .main-image img {
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
     }
     
     /* Make illustrations very small and subtle on mobile */
