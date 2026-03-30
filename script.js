@@ -206,23 +206,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Update active nav link based on current page
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const pathname = window.location.pathname;
     const desktopNavLinks = document.querySelectorAll('.desktop-nav a, .mobile-nav a');
     
     desktopNavLinks.forEach(link => {
-        const linkPage = link.getAttribute('href');
+        const linkPath = link.getAttribute('href');
+        link.classList.remove('active'); // Reset all first
         
-        // Handle index.html comparison
-        if (currentPage === '' || currentPage === 'index.html') {
-            if (linkPage === 'index.html' || linkPage === './' || linkPage === '/') {
+        // Handle home page specifically
+        if (pathname === '/' || pathname === '/index.html' || pathname === '') {
+            if (linkPath === '/' || linkPath === '/index.html') {
                 link.classList.add('active');
-            } else {
-                link.classList.remove('active');
             }
-        } else if (linkPage === currentPage) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
+        } 
+        // Handle sub-pages (e.g., /about/)
+        else {
+            // Must not be the home link, and the current URL must include the link's href
+            if (linkPath !== '/' && linkPath !== '/index.html' && pathname.includes(linkPath)) {
+                link.classList.add('active');
+            }
         }
     });
 });
